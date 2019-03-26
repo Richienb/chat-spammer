@@ -26,7 +26,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Spammer = New System.Windows.Forms.Timer(Me.components)
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.TextBox1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.MaterialSingleLineTextField1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,22 +48,22 @@ Partial Class Form1
         Me.NumericUpDown1.TabIndex = 8
         Me.NumericUpDown1.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
-        'TextBox1
+        'MaterialSingleLineTextField1
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.MaterialSingleLineTextField1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Depth = 0
-        Me.TextBox1.Hint = "Text"
-        Me.TextBox1.Location = New System.Drawing.Point(13, 74)
-        Me.TextBox1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TextBox1.SelectedText = ""
-        Me.TextBox1.SelectionLength = 0
-        Me.TextBox1.SelectionStart = 0
-        Me.TextBox1.Size = New System.Drawing.Size(174, 23)
-        Me.TextBox1.TabIndex = 10
-        Me.TextBox1.UseSystemPasswordChar = False
+        Me.MaterialSingleLineTextField1.Depth = 0
+        Me.MaterialSingleLineTextField1.Hint = "Text"
+        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(13, 74)
+        Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
+        Me.MaterialSingleLineTextField1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MaterialSingleLineTextField1.SelectedText = ""
+        Me.MaterialSingleLineTextField1.SelectionLength = 0
+        Me.MaterialSingleLineTextField1.SelectionStart = 0
+        Me.MaterialSingleLineTextField1.Size = New System.Drawing.Size(174, 23)
+        Me.MaterialSingleLineTextField1.TabIndex = 10
+        Me.MaterialSingleLineTextField1.UseSystemPasswordChar = False
         '
         'MaterialRaisedButton1
         '
@@ -103,7 +103,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(200, 220)
         Me.Controls.Add(Me.MaterialRaisedButton2)
         Me.Controls.Add(Me.MaterialRaisedButton1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.MaterialSingleLineTextField1)
         Me.Controls.Add(Me.NumericUpDown1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -117,7 +117,7 @@ Partial Class Form1
     End Sub
     Friend WithEvents Spammer As System.Windows.Forms.Timer
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents TextBox1 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
 End Class

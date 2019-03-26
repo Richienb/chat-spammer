@@ -10,7 +10,7 @@ Public Class Form1
     End Sub
 
     Private Sub Spammer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Spammer.Tick
-        SendKeys.Send(TextBox1.Text)
+        If Not MaterialSingleLineTextField1.Focused = True And Not NumericUpDown1.Focused = True Then SendKeys.Send(MaterialSingleLineTextField1.Text)
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
@@ -23,14 +23,10 @@ Public Class Form1
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
         Spammer.Enabled = Not Spammer.Enabled
-        If Spammer.Enabled = True Then
-            MaterialRaisedButton2.Text = "Stop"
-        Else
-            MaterialRaisedButton2.Text = "Start"
-        End If
+        MaterialRaisedButton2.Text = If(Spammer.Enabled = True, "Stop", "Start")
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
-        MaterialRaisedButton2.Enabled = Spammer.Enabled = True Or Not TextBox1.Text = ""
+    Private Sub MaterialSingleLineTextField1_TextChanged(sender As Object, e As EventArgs) Handles MaterialSingleLineTextField1.TextChanged
+        MaterialRaisedButton2.Enabled = Spammer.Enabled = True Or Not MaterialSingleLineTextField1.Text = ""
     End Sub
 End Class
