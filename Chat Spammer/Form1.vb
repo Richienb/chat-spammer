@@ -23,6 +23,7 @@ Public Class Form1
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
         Spammer.Enabled = Not Spammer.Enabled
+        If (Spammer.Enabled = True) Then Me.ActiveControl = Nothing
         MaterialRaisedButton2.Text = If(Spammer.Enabled = True, "Stop", "Start")
     End Sub
 
